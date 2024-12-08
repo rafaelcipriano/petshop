@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <link href="https://fonts.googleapis.com/css2?family=Inter+Tight:ital,wght@0,100..900;1,100..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+  <script type="module" src="main.js"></script>
+  <link rel="shortcut icon" href="src/assets/favicon.png" type="image/png">
+  <title>Mundo Pet</title>
+<script defer src="main.js"></script></head>
+<body>
+  <div class="logo">
+    <img src="src/assets/logo.png" alt="Logotipo do mundo pet, desenho de uma pata ao fundo e a frente um cachorro e um gato lado a lado.">
+  </div>
+
+  <section id="schedule">
+    <header>
+      <div class="title">
+        <h2>Sua agenda</h2>
+        <p>Aqui você pode ver todos os clientes e serviços agendados para hoje.</p>
+      </div>
+
+      <div class="wrapper-calendar">
+        <img src="src/assets/calendar.svg" alt="Ícone de calendário">
+        <input type="date" name="date" id="date">
+      </div>
+    </header>
+
+    <aside>
+      <div class="period">
+        <span>
+          <img src="src/assets/sunset.svg" alt="Ícone de por do sol">
+          Manhã
+        </span>
+
+        <span>09h-12h</span>
+      </div>
+
+      <ul class="period-morning schedule-items">
+        <!--
+        <li>
+          <span class="hour">09:00</span>
+
+          <span>
+            <span class="pet">Thor</span>
+            <span class="person">/Fernanda Costa</span>
+          </span>
+
+          <span class="service">Vacinação</span>
+          
+          <button class="remove">Remover agendamento</button>
+        </li>
+        -->
+      </ul>
+    </aside>
+
+    <aside>
+      <div class="period">
+        <span>
+          <img src="src/assets/cloud-sun.svg" alt="Ícone de por do sol">
+          Tarde
+        </span>
+
+        <span>13h-18h</span>
+      </div>
+
+      <ul class="period-afternoon schedule-items">
+        <!--
+        <li>
+          <span class="hour">13:00</span>
+
+          <span>
+            <span class="pet">Mel</span>
+            <span class="person">/João Souza</span>
+          </span>
+
+          <span class="service">Corte de unhas</span>
+
+          <button class="remove">Remover agendamento</button>
+        </li>
+        -->
+
+        <!--
+        <li>
+          <span class="hour">14:00</span>
+
+          <span>
+            <span class="pet">Bella</span>
+            <span class="person">/Pedro Martins</span>
+          </span>
+
+          <span class="service">Aplicação de Anti-pulgas</span>
+
+          <button class="remove">Remover agendamento</button>
+        </li>
+        -->
+
+        <!--
+        <li>
+          <span class="hour">15:00</span>
+
+          <span>
+            <span class="pet">Simba</span>
+            <span class="person">/Juliana Rocha</span>
+          </span>
+
+          <span class="service">Tosa Higiênica</span>
+
+          <button class="remove">Remover agendamento</button>
+        </li>
+        -->
+      </ul>
+    </aside>
+
+    <aside>
+      <div class="period">
+        <span>
+          <img src="src/assets/moon-stars.svg" alt="Ícone de por do sol">
+          Noite
+        </span>
+
+        <span>19h-21h</span>
+      </div>
+
+      <ul class="period-evening schedule-items">
+        <!--
+        <li>
+          <span class="hour">20:00</span>
+
+          <span>
+            <span class="pet">Max</span>
+            <span class="person">/Camila Santos</span>
+          </span>
+
+          <span class="service">Limpeza de dentes</span>
+
+          <button class="remove">Remover agendamento</button>
+        </li>
+        -->
+      </ul>
+    </aside>
+  </section>
+
+  <section id="modal">
+    <div class="wrapper-form">
+      <button class="close">
+        <img src="src/assets/close-small.svg" alt="Botão de fechar">
+      </button>
+
+      <h2>Agende um atendimento</h2>
+      <p>Preencha os dados do cliente para realizar o agendamento:</p>
+
+      <form action="#">
+        <div class="input-wrapper">
+          <label for="#">Nome do tutor</label>
+          <input type="text" name="name" id="name" placeholder="Helena Souza" required>
+        </div>
+
+        <div class="input-wrapper">
+          <label for="#">Nome do pet</label>
+          <input type="text" name="pet-name" id="pet-name" placeholder="Cheddar" required>
+        </div>
+
+        <div class="input-wrapper">
+          <label for="#">Telefone</label>
+          <input type="tel" name="phone-number" id="phone-number" placeholder="(00) 0 0000-0000" required>
+        </div>
+
+        <div class="input-wrapper">
+          <label for="#">Descrição do serviço</label>
+          <textarea 
+            required
+            placeholder="Banho e tosa"
+            name="service-description" 
+            id="service-description"></textarea>
+        </div>
+
+        <div class="flex">
+          <div class="wrapper-calendar">
+            <img src="src/assets/calendar.svg" alt="Ícone de calendário">
+            <input type="date" name="date" id="date" required>
+          </div>
+
+          <div class="wrapper-time">
+            <img src="src/assets/clock.svg" alt="Ícone de relógio">
+            <select required name="time" id="time">
+              <!-- <option value="09:00">09:00</option>
+              <option value="10:00">10:00</option>
+              <option value="11:00">11:00</option>
+              <option value="12:00">12:00</option>
+              <option value="13:00">13:00</option>
+              <option value="14:00">14:00</option>
+              <option value="15:00">15:00</option>
+              <option value="16:00">16:00</option>
+              <option value="17:00">17:00</option>
+              <option value="18:00">18:00</option>
+              <option value="19:00">19:00</option>
+              <option value="20:00">20:00</option>
+              <option value="21:00">21:00</option> -->
+            </select>
+          </div>
+        </div>
+
+        <input type="submit" value="Agendar">
+      </form>
+    </div>
+  </section>
+
+  <footer>
+    <button>Novo agendamento</button>
+  </footer>
+</body>
+</html>

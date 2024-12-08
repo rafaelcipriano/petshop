@@ -1,0 +1,119 @@
+#schedule {
+  width: 100%;
+  max-width: 71.1rem;
+
+  display: flex;
+  flex-direction: column;
+  gap: 3.2rem;
+
+  margin-inline: auto;
+
+  header {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    align-items: center;
+
+    .wrapper-calendar {
+      display: flex;
+      flex-flow: row nowrap;
+      justify-content: space-between;
+      border: 1px solid var(--border-primary);
+      padding: 1.2rem;
+      border-radius: .8rem;
+      background-color: transparent;
+      position: relative;
+
+      input[type=date] {
+        height: 2rem;
+        outline: none;
+        border: none;
+        background-color: inherit;
+        font: 1.6rem var(--ff-inter);
+        text-align: center;
+        color: var(--content-secondary);
+
+        &::-webkit-calendar-picker-indicator {
+          background-image: url("../assets/arrow-down.svg");
+          cursor: pointer;
+        }
+      }
+    }
+  }
+
+  aside {
+    background-color: var(--background-tertiary);
+    border-radius: 1rem;
+
+    .period {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1.2rem 2rem;
+      border-bottom: 2px solid var(--border-primary); 
+
+      span {
+        font: var(--label-large);
+
+        &:first-child {
+          color: var(--content-primary);
+          display: flex;
+          align-items: center;
+          gap: 1.2rem;
+        }
+
+        &:last-child {
+          color: var(--content-secondary);
+        }
+      }
+    }
+
+    ul {
+      list-style: none;
+      width: 100%;
+      max-width: 67.1rem;
+      margin-inline: auto;
+      padding: 2rem;
+
+      li {
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: space-between;
+        align-items: center;
+        padding: 1.2rem;
+        gap: 1rem;
+        border-bottom: 1px solid var(--border-primary);
+
+        .hour {
+          font: var(--label-medium);
+          color: var(--content-primary);
+        }
+
+        .pet {
+          font: var(--label-small);
+          color: var(--content-primary);
+        }
+
+        .person,
+        .service,
+        .remove {
+          font: var(--paragraph-small);
+          color: var(--content-secondary);
+        }
+
+        .remove {
+          cursor: pointer;
+          color: var(--content-secondary);
+          border: none;
+          background-color: transparent;
+          cursor: pointer;
+          transition: color ease .2s;
+
+          &:hover {
+            color: darkred;
+          }
+        }
+      }
+    }
+  }
+}

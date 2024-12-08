@@ -1,0 +1,106 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  /* ===== TEXT ===== */
+  font-size: 62.5%;
+
+  --ff-inter-tight: "Inter Tight", sans-serif;
+  --ff-inter: "Inter", sans-serif;
+
+  --title: 700 2.4rem/3.2rem var(--ff-inter-tight);
+  --paragraph-medium: 500 1.4rem/2.4rem var(--ff-inter);
+  --paragraph-small: 500 1.2rem/1.6rem var(--ff-inter);
+  --label-large: 700 1.6rem/2.4rem var(--ff-inter);
+  --label-medium: 700 1.4rem/2.4rem var(--ff-inter);
+  --label-small: 700 1.2rem/1.6rem var(--ff-inter);
+  --link: 500 1.2rem/2.6rem var(--ff-inter);
+
+  /* ===== COLORS ===== */
+  --content-primary: #FFFFFF;
+  --content-secondary: #98959D;
+  --content-tertiary: #666666;
+  --content-brand: #9282FA;
+
+  --background-primary: #151515;
+  --background-secondary: #1E1E1E;
+  --background-tertiary: #23242C;
+  --background-brand: #9282FA;
+  --background-highlights: #BDB4FA;
+
+  --border-primary: #3E3C41;
+  --border-secondary: #86818C;
+  --border-brand: #9282FA;
+  --border-divisor: #353339;
+
+  --accent-blue: #027DF0;
+  --accent-blue-light: #16487A;
+  --accent-yellow: #F0DC02;
+  --accent-yellow-light: #756E1B;
+  --accent-orange: #F09102;
+  --accent-orange-light: #75501B;
+}
+
+body {
+  font-size: 1.6rem;
+  background-color: var(--background-secondary);
+  position: relative;
+
+  &.scheduling #modal {
+    display: flex;
+    &::before { display: block; }
+  }
+
+  & div.logo {
+    height: 4.8rem;
+    width: 15.3rem;
+    background-color: #2E2C30;
+    border-bottom-right-radius: .8rem;
+    padding: 1.2rem 2rem;
+    position: relative;
+    z-index: 2;
+  }
+
+  h2 {
+    font: var(--title);
+    color: var(--content-primary);
+  }
+
+  p {
+    font: var(--paragraph-medium);
+    color: var(--content-secondary);
+  }
+
+  footer {
+    display: flex;
+    justify-content: flex-end;
+    padding: 4rem 3.2rem 1rem;
+
+    button {
+      text-transform: uppercase;
+      font: var(--label-large);
+      color: #050505;
+      padding: 1.2rem 2.4rem;
+      border: 1px solid var(--content-brand);
+      border-radius: .8rem;
+      background-color: var(--content-brand);
+      box-shadow: 0px 0px 40px rgba(146, 130, 250, 0.3);
+      cursor: pointer;
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  body {
+    #schedule {
+      padding-inline: 2rem;
+    }
+
+    footer {
+      justify-content: center;
+    }
+  }
+}
